@@ -17,7 +17,7 @@ else()
 endif()
 
 add_library(GDMenu SHARED
-  src/main.cpp src/overlay.cpp src/speedhack.cpp src/config.cpp
+  main.cpp overlay.cpp speedhack.cpp config.cpp
   ${minhook_SOURCE_DIR}/src/buffer.c
   ${minhook_SOURCE_DIR}/src/hook.c
   ${minhook_SOURCE_DIR}/src/trampoline.c
