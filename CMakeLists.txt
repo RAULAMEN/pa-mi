@@ -29,7 +29,7 @@ add_library(GDMenu SHARED
   ${imgui_SOURCE_DIR}/backends/imgui_impl_win32.cpp
   ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl2.cpp)
 
-target_include_directories(GDMenu PRIVATE src
+   target_include_directories(GDMenu PRIVATE ${CMAKE_SOURCE_DIR}
   ${minhook_SOURCE_DIR}/include ${imgui_SOURCE_DIR} ${imgui_SOURCE_DIR}/backends)
 target_compile_definitions(GDMenu PRIVATE IMGUI_IMPL_WIN32_DISABLE_GAMEPAD NOMINMAX WIN32_LEAN_AND_MEAN)
 target_link_libraries(GDMenu PRIVATE opengl32 gdi32 winmm user32 dwmapi)
